@@ -29,7 +29,6 @@ extension Article {
         summary: "Apple's latest SwiftUI update introduces liquid glass effects, improved navigation APIs, and a revamped animation system that makes building beautiful apps easier than ever.",
         content: "SwiftUI continues to evolve rapidly.\n\nThe latest release introduces several groundbreaking APIs including native liquid glass materials, a more powerful NavigationStack, and Observable macro support.\n\nDevelopers are already praising the improvements.",
         readTimeMinutes: 4,
-        isTrending: true,
         reliabilityScore: 87
     )
 
@@ -43,7 +42,6 @@ extension Article {
         summary: "A viral study making rounds on social media claims that drinking five cups of coffee a day eliminates all risk of chronic disease.",
         content: "Health experts are skeptical of the claims.\n\nThe study, published on an unverified blog, has not undergone peer review.",
         readTimeMinutes: 2,
-        isTrending: false,
         reliabilityScore: 21
     )
 }

@@ -39,7 +39,6 @@ final class LocalArticleDataSource: ArticleDataSourceProtocol {
             Developers at WWDC previewed applications optimized for the chip, including a new version of Final Cut Pro that uses the Neural Engine for automatic color grading and AI-powered audio cleanup.
             """,
             readTimeMinutes: 6,
-            isTrending: true,
             reliabilityScore: 92
         ),
         ArticleDTO(
@@ -64,7 +63,6 @@ final class LocalArticleDataSource: ArticleDataSourceProtocol {
             Medical ethicists have urged caution. "The risk is over-reliance," warned Dr. Samuel Okonkwo of Johns Hopkins. "Physicians may defer to AI judgment even when their clinical intuition is correct, simply because the model sounds authoritative." Regulatory bodies including the FDA have begun drafting frameworks for AI medical assistants, with final guidelines expected next year.
             """,
             readTimeMinutes: 7,
-            isTrending: true,
             reliabilityScore: 88
         ),
         ArticleDTO(
@@ -89,7 +87,6 @@ final class LocalArticleDataSource: ArticleDataSourceProtocol {
             Economists estimate the carbon pricing floor will add approximately $0.25 per gallon to gasoline prices in participating nations within two years. Offsetting revenue recycling provisions, however, are expected to deliver net-zero or positive fiscal impacts for lower-income households.
             """,
             readTimeMinutes: 8,
-            isTrending: true,
             reliabilityScore: 95
         ),
         ArticleDTO(
@@ -114,7 +111,6 @@ final class LocalArticleDataSource: ArticleDataSourceProtocol {
             Tesla shares rose 9% in after-hours trading following the announcement. The stock has gained 34% year-to-date, making it one of the top performers in the S&P 500 this quarter.
             """,
             readTimeMinutes: 6,
-            isTrending: false,
             reliabilityScore: 90
         ),
         ArticleDTO(
@@ -139,7 +135,6 @@ final class LocalArticleDataSource: ArticleDataSourceProtocol {
             Health economists estimate that widespread adoption of the Mediterranean diet in Western nations could prevent 2.3 million premature cardiovascular deaths per decade and save healthcare systems over $800 billion in treatment costs.
             """,
             readTimeMinutes: 7,
-            isTrending: false,
             reliabilityScore: 97
         ),
         ArticleDTO(
@@ -164,7 +159,6 @@ final class LocalArticleDataSource: ArticleDataSourceProtocol {
             NASA Administrator Karen Bridgeman described the mission as "the foundation of humanity's permanent presence beyond Earth." Congressional leaders from both parties issued joint statements of congratulation — a rare bipartisan moment in the current political climate.
             """,
             readTimeMinutes: 7,
-            isTrending: true,
             reliabilityScore: 98
         ),
         ArticleDTO(
@@ -189,7 +183,6 @@ final class LocalArticleDataSource: ArticleDataSourceProtocol {
             The Los Angeles Lakers won the game 118-107, moving them to within 1.5 games of first place in the Western Conference with eight games remaining in the regular season.
             """,
             readTimeMinutes: 6,
-            isTrending: true,
             reliabilityScore: 94
         ),
         ArticleDTO(
@@ -214,7 +207,6 @@ final class LocalArticleDataSource: ArticleDataSourceProtocol {
             Financial analysts expect the two-film release strategy to generate over $5 billion in combined box office revenue globally, potentially surpassing Endgame's all-time record. Pre-sale tickets opened Thursday morning and crashed Fandango and AMC's websites within minutes.
             """,
             readTimeMinutes: 5,
-            isTrending: false,
             reliabilityScore: 85
         ),
         ArticleDTO(
@@ -239,7 +231,6 @@ final class LocalArticleDataSource: ArticleDataSourceProtocol {
             Major technology companies issued statements Thursday. Google announced it has already migrated Gmail's encryption to post-quantum algorithms. Apple confirmed iMessage has been post-quantum compliant since iOS 19. Financial institutions face the most urgent pressure, with regulators expected to mandate migration timelines within months.
             """,
             readTimeMinutes: 8,
-            isTrending: true,
             reliabilityScore: 93
         ),
         ArticleDTO(
@@ -264,7 +255,6 @@ final class LocalArticleDataSource: ArticleDataSourceProtocol {
             The Alzheimer's Association called the announcement "the most significant development in the field since the disease was first described in 1906," adding that successful deployment could prevent 9 million new cases globally per decade.
             """,
             readTimeMinutes: 7,
-            isTrending: false,
             reliabilityScore: 96
         ),
         ArticleDTO(
@@ -289,7 +279,6 @@ final class LocalArticleDataSource: ArticleDataSourceProtocol {
             Skeptics warn that the speed of appreciation signals speculative excess. JPMorgan's Jamie Dimon, long a Bitcoin critic, acknowledged the institutional momentum but warned of "significant volatility ahead" as leveraged positions in the derivatives market swell.
             """,
             readTimeMinutes: 6,
-            isTrending: false,
             reliabilityScore: 79
         ),
         ArticleDTO(
@@ -314,7 +303,6 @@ final class LocalArticleDataSource: ArticleDataSourceProtocol {
             For host nation the United States, the tournament was a commercial and cultural triumph despite early elimination in the Round of 16. Record attendance and broadcasting revenues confirmed soccer's emergence as a top-five sport in the American market.
             """,
             readTimeMinutes: 6,
-            isTrending: false,
             reliabilityScore: 96
         ),
         ArticleDTO(
@@ -339,7 +327,6 @@ final class LocalArticleDataSource: ArticleDataSourceProtocol {
             Regional reactions ranged from cautious optimism to hostility. Iran condemned the agreement as "a betrayal of the Palestinian cause." Jordan and Egypt, which normalized relations with Israel decades ago, welcomed the accord as a stabilizing development.
             """,
             readTimeMinutes: 8,
-            isTrending: false,
             reliabilityScore: 91
         ),
         ArticleDTO(
@@ -362,7 +349,6 @@ final class LocalArticleDataSource: ArticleDataSourceProtocol {
             Content spending reached $22 billion this year, including a record-breaking $400 million deal with Game of Thrones showrunners David Benioff and D.B. Weiss for a new fantasy saga. The company also announced expansion into live sports, securing UEFA Champions League broadcasting rights for 30 countries beginning next season.
             """,
             readTimeMinutes: 6,
-            isTrending: false,
             reliabilityScore: 88
         ),
         ArticleDTO(
@@ -387,7 +373,6 @@ final class LocalArticleDataSource: ArticleDataSourceProtocol {
             The research team is now extending the approach to six additional inherited eye diseases, with Phase 1 trials underway in two. They also reported promising preclinical data suggesting adaptation of the platform for age-related macular degeneration, the leading cause of adult blindness globally.
             """,
             readTimeMinutes: 7,
-            isTrending: false,
             reliabilityScore: 97
         ),
         ArticleDTO(
@@ -412,7 +397,6 @@ final class LocalArticleDataSource: ArticleDataSourceProtocol {
             Governments in eight countries have issued statements welcoming Kuiper's launch, citing anticipated benefits for telemedicine, distance education, and e-government services in remote regions.
             """,
             readTimeMinutes: 6,
-            isTrending: false,
             reliabilityScore: 89
         )
     ]

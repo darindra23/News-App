@@ -19,7 +19,6 @@ struct ArticleDTOTests {
         #expect(article.summary == dto.summary)
         #expect(article.content == dto.content)
         #expect(article.readTimeMinutes == dto.readTimeMinutes)
-        #expect(article.isTrending == dto.isTrending)
         #expect(article.reliabilityScore == dto.reliabilityScore)
     }
 
@@ -35,7 +34,6 @@ struct ArticleDTOTests {
             summary: "",
             content: "",
             readTimeMinutes: 0,
-            isTrending: false,
             reliabilityScore: 0
         )
 
@@ -54,7 +52,6 @@ struct ArticleDTOTests {
             summary: "",
             content: "",
             readTimeMinutes: 0,
-            isTrending: false,
             reliabilityScore: 0
         )
 

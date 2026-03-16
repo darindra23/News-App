@@ -5,6 +5,9 @@ struct AppNavigationStack: View {
     private var router = AppRouter()
     private let appDependencies = AppDependencies.shared
 
+    @AppStorage("isDarkMode")
+    private var isDarkMode = false
+
     var body: some View {
         NavigationStack(path: $router.path) {
             NewsListView(viewModel: appDependencies.makeNewsListViewModel())
@@ -18,5 +21,6 @@ struct AppNavigationStack: View {
                 }
         }
         .environment(router)
+        .preferredColorScheme(isDarkMode ? .dark : .light)
     }
 }

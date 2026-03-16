@@ -18,10 +18,6 @@ final class NewsListViewModel {
         state.value ?? []
     }
 
-    var trendingArticles: [Article] {
-        allArticles.filter { $0.isTrending }
-    }
-
     var filteredArticles: [Article] {
         var articles = allArticles
         if let category = selectedCategory {

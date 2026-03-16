@@ -14,7 +14,6 @@ extension Article {
         summary: "Test summary",
         content: "Paragraph one.\n\nParagraph two.",
         readTimeMinutes: 4,
-        isTrending: true,
         reliabilityScore: 87
     )
 
@@ -28,7 +27,6 @@ extension Article {
         summary: "Another summary",
         content: "Some content.",
         readTimeMinutes: 2,
-        isTrending: false,
         reliabilityScore: 45
     )
 }
@@ -44,7 +42,6 @@ extension ArticleDTO {
         summary: "Test summary",
         content: "Paragraph one.\n\nParagraph two.",
         readTimeMinutes: 4,
-        isTrending: true,
         reliabilityScore: 87
     )
 }

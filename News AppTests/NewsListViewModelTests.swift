@@ -168,16 +168,4 @@ struct NewsListViewModelTests {
         #expect(sut.filteredArticles.isEmpty)
     }
 
-    // MARK: - Trending Articles
-
-    @Test("trendingArticles returns only trending articles")
-    func trendingArticlesFiltersCorrectly() async {
-        let useCase = MockFetchArticlesUseCase()
-        useCase.stubbedArticles = [.fixture, .fixture2] // fixture is trending, fixture2 is not
-        let sut = NewsListViewModel(fetchArticlesUseCase: useCase)
-        await sut.loadArticles()
-
-        #expect(sut.trendingArticles.count == 1)
-        #expect(sut.trendingArticles[0].id == Article.fixture.id)
-    }
 }
