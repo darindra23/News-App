@@ -17,11 +17,24 @@ enum ArticleCategory: String, CaseIterable, Identifiable {
         switch self {
         case .technology: return "cpu.fill"
         case .politics: return "building.columns.fill"
-        case .sports: return "sportscourt.fill"
+        case .sports: return "figure.run"
         case .business: return "chart.line.uptrend.xyaxis"
         case .health: return "heart.fill"
         case .science: return "atom"
         case .entertainment: return "film.fill"
+        }
+    }
+
+    /// Oigetit-style display name used in the category filter bar
+    var displayName: String {
+        switch self {
+        case .technology: return "A.I. News"
+        case .politics: return "Politics"
+        case .sports: return "Sports"
+        case .business: return "Business"
+        case .health: return "Health"
+        case .science: return "Science"
+        case .entertainment: return "Entertainment"
         }
     }
 
@@ -50,7 +63,6 @@ struct Article: Identifiable, Equatable, Hashable {
     let summary: String
     let content: String
     let readTimeMinutes: Int
-    let isTrending: Bool
     /// Oigetit-inspired reliability score: 0–100
     let reliabilityScore: Int
 
@@ -66,10 +78,9 @@ struct Article: Identifiable, Equatable, Hashable {
 
     var reliabilityColor: Color {
         switch reliabilityScore {
-        case 80 ... 100: return .green
-        case 60 ..< 80: return .blue
-        case 40 ..< 60: return .orange
-        default: return .red
+        case 60 ... 100: return OigetitTheme.reliabilityGreen
+        case 40 ..< 60: return OigetitTheme.reliabilityOrange
+        default: return OigetitTheme.reliabilityRed
         }
     }
 }

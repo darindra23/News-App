@@ -1,33 +1,41 @@
 # News App
 
-A SwiftUI news reader app inspired by [Oigetit](https://www.oigetit.com), built to demonstrate clean architecture, modern Swift concurrency, and iOS 26 design capabilities.
+A SwiftUI news reader app inspired by [Oigetit](https://www.oigetit.com), built to demonstrate clean architecture, modern Swift concurrency, and pixel-accurate UI reproduction.
 
 ---
 
 ## Screenshots
 
+### News Feed
+
 <table>
   <tr>
     <td align="center">
-      <img src="Screenshots/news-list.png" width="220"/>
+      <img src="Screenshots/news-list-light.png" width="220"/>
       <br/>
-      <sub><b>News Feed</b></sub>
-      <br/>
-      <sub>Trending carousel · category chips · article list with reliability bar</sub>
+      <sub><b>Light Mode</b></sub>
     </td>
     <td align="center">
-      <img src="Screenshots/category-filter.png" width="220"/>
+      <img src="Screenshots/news-list-dark.png" width="220"/>
       <br/>
-      <sub><b>Category Filter</b></sub>
+      <sub><b>Dark Mode</b></sub>
+    </td>
+  </tr>
+</table>
+
+### Article Detail
+
+<table>
+  <tr>
+    <td align="center">
+      <img src="Screenshots/article-detail-light.png" width="220"/>
       <br/>
-      <sub>Liquid glass chips · filtered article list</sub>
+      <sub><b>Light Mode</b></sub>
     </td>
     <td align="center">
-      <img src="Screenshots/article-detail.png" width="220"/>
+      <img src="Screenshots/article-detail-dark.png" width="220"/>
       <br/>
-      <sub><b>Article Detail</b></sub>
-      <br/>
-      <sub>Hero section · reliability score · summary · full content</sub>
+      <sub><b>Dark Mode</b></sub>
     </td>
   </tr>
 </table>
@@ -36,10 +44,10 @@ A SwiftUI news reader app inspired by [Oigetit](https://www.oigetit.com), built 
 
 ## Features
 
-- **News feed** with trending carousel and full article list
-- **Category filter** with liquid glass chips (iOS 26 `.glassEffect`)
+- **News feed** with category filter chips and full article list
 - **Search** across title, source, and author
-- **Article detail** with reliability score, read time, and full content
+- **Article detail** with reliability score, sentiment indicator, and full content
+- **Dark mode toggle** accessible from both the list and detail screens
 - **Shimmer skeleton** loading animation on both list and detail screens
 - **Bookmark** toggle on article detail
 - **Error state** with retry on all screens
@@ -124,6 +132,15 @@ Adding a new screen requires only:
 
 All spacing values are visible in the `Spacing.swift` Xcode preview.
 
+**Brand Colors (`OigetitTheme`)**
+
+| Token | Hex | Usage |
+|-------|-----|-------|
+| `primaryBlue` | `#00ADEE` | Navbar, selected chips, action icons |
+| `reliabilityGreen` | `#27AE60` | Reliability score ≥ 60% |
+| `reliabilityOrange` | `#F39C12` | Reliability score 40–59% |
+| `reliabilityRed` | `#E74C3C` | Reliability score < 40% |
+
 ---
 
 ## Tech Stack
@@ -132,11 +149,10 @@ All spacing values are visible in the `Spacing.swift` Xcode preview.
 |---|---|
 | **Language** | Swift 5.10 |
 | **UI** | SwiftUI |
-| **Minimum target** | iOS 26 |
+| **Minimum target** | iOS 17 |
 | **Concurrency** | Swift Concurrency (`async`/`await`) |
 | **State management** | `@Observable` macro |
 | **Testing** | Swift Testing framework |
-| **Design** | iOS 26 Liquid Glass (`.glassEffect`) |
 
 ---
 
@@ -173,8 +189,8 @@ News App/
 └── Presentation/
     ├── Common/
     │   ├── ViewState.swift
-    │   ├── Components/             # ArticleCardView, TrendingCardView, etc.
-    │   ├── DesignSystem/           # Spacing, ShimmerModifier
+    │   ├── Components/             # ArticleCardView, CategoryChipView, etc.
+    │   ├── DesignSystem/           # Spacing, OigetitTheme, ShimmerModifier
     │   └── Previews/               # Article+Mock (shared fixture)
     ├── NewsList/
     │   ├── NewsListView.swift
@@ -198,7 +214,7 @@ News AppTests/
 
 ## Testing
 
-40 unit tests written with the **Swift Testing** framework covering all three layers.
+Unit tests written with the **Swift Testing** framework covering all three layers.
 
 ```
 swift test
@@ -212,7 +228,7 @@ Or press `Cmd+U` in Xcode.
 | `ArticleRepositoryTests` | DTO→domain mapping, empty result, error propagation, fetch by id |
 | `FetchArticlesUseCaseTests` | Delegates to repository, propagates errors |
 | `FetchArticleDetailUseCaseTests` | Delegates to repository, not found, error propagation |
-| `NewsListViewModelTests` | State transitions, idle guard, retry, category filter, search, trending |
+| `NewsListViewModelTests` | State transitions, idle guard, retry, category filter, search |
 | `ArticleDetailViewModelTests` | State transitions, retry, bookmark toggle, derived state |
 
 All ViewModel test suites are `@MainActor` for Swift 6 compatibility.
@@ -223,7 +239,7 @@ All ViewModel test suites are `@MainActor` for Swift 6 compatibility.
 
 1. Clone the repo
 2. Open `News App.xcodeproj` in Xcode 26+
-3. Select a simulator running iOS 26
+3. Select a simulator running iOS 17+
 4. Press `Cmd+R` to run
 
 No dependencies, no package manager setup required.

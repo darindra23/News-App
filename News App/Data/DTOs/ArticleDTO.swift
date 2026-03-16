@@ -10,7 +10,6 @@ struct ArticleDTO {
     let summary: String
     let content: String
     let readTimeMinutes: Int
-    let isTrending: Bool
     let reliabilityScore: Int
 
     func toDomain() -> Article {
@@ -24,7 +23,6 @@ struct ArticleDTO {
             summary: summary,
             content: content,
             readTimeMinutes: readTimeMinutes,
-            isTrending: isTrending,
             reliabilityScore: reliabilityScore
         )
     }
